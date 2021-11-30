@@ -49,4 +49,4 @@ korea = conn.korea
 T_Code = korea.T_Code
 num_stocks = T_Code.count_documents({})
 
-print(num_stocks)
+st.write(num_stocks)
