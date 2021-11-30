@@ -43,7 +43,7 @@ client = pymongo.MongoClient(**st.secrets["mongo"])
 
 # Pull data from the collection.
 # Uses st.cache to only rerun when the query changes or after 10 min.
-@st.cache(ttl=600)
+@st.cache(ttl=5)
 def get_data():
     db = client.mydb
     items = db.mycollection.find()
