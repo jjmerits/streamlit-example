@@ -45,15 +45,8 @@ conn = pymongo.MongoClient(st.secrets.db_credentials.HOST,st.secrets.db_credenti
 
 # Pull data from the collection.
 # Uses st.cache to only rerun when the query changes or after 10 min.
-@st.cache(ttl=5)
-def get_data():
-    db = conn.korea
-    items = db.T_Code.find()
-    items = list(items)  # make hashable for st.cache
-    return items
+korea = conn.korea
+T_Code = korea.T_Code
+num_stocks = T_Code.count_documents({})
 
-items = get_data()
-
-# Print results.
-for item in items:
-    st.write(f"{item}")
+print(num_stocks)
