@@ -3,7 +3,7 @@ import altair as alt
 import math
 import pandas as pd
 import streamlit as st
-import pymongo
+from pymongo import MongoClient
 
 """
 # Welcome to Streamlit!
@@ -39,13 +39,13 @@ with st.echo(code_location='below'):
         .encode(x='x:Q', y='y:Q'))
 
 # Initialize connection.
-client = pymongo.MongoClient(**st.secrets["mongo"])
+conn = MongoClient('127.0.0.1',27017, username=st.secrets.db_credentials.DB_USER,password=st.secrets.db_credentials.DB_TOKEN, tls=True, tlsAllowInvalidCertificates=True)
 
 # Pull data from the collection.
 # Uses st.cache to only rerun when the query changes or after 10 min.
 @st.cache(ttl=5)
 def get_data():
-    db = client.mydb
+    db = conn.korea
     items = db.mycollection.find()
     items = list(items)  # make hashable for st.cache
     return items
