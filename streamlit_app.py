@@ -50,3 +50,5 @@ T_Code = korea.T_Code
 num_stocks = T_Code.count_documents({})
 
 st.write(num_stocks)
+
+client.close()
