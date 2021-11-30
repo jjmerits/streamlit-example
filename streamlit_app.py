@@ -48,7 +48,7 @@ conn = pymongo.MongoClient(st.secrets.db_credentials.HOST,st.secrets.db_credenti
 @st.cache(ttl=5)
 def get_data():
     db = conn.korea
-    items = db.mycollection.find()
+    items = db.T_Code.find()
     items = list(items)  # make hashable for st.cache
     return items
 
