@@ -39,8 +39,7 @@ with st.echo(code_location='below'):
         .encode(x='x:Q', y='y:Q'))
 
     
-st.write("DB username:", st.secrets.db_credentials["DB_USER"])
-st.write("DB password:", st.secrets.db_credentials["DB_TOKEN"])
+
 # Initialize connection.
 conn = pymongo.MongoClient(st.secrets.db_credentials.HOST,st.secrets.db_credentials.PORT, username=st.secrets.db_credentials.DB_USER,password=st.secrets.db_credentials.DB_TOKEN, tls=True, tlsAllowInvalidCertificates=True)
 
