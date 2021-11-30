@@ -3,6 +3,7 @@ import altair as alt
 import math
 import pandas as pd
 import streamlit as st
+import pymongo
 
 """
 # Welcome to Streamlit!
@@ -36,3 +37,21 @@ with st.echo(code_location='below'):
     st.altair_chart(alt.Chart(pd.DataFrame(data), height=500, width=500)
         .mark_circle(color='#0068c9', opacity=0.5)
         .encode(x='x:Q', y='y:Q'))
+
+# Initialize connection.
+client = pymongo.MongoClient(**st.secrets["mongo"])
+
+# Pull data from the collection.
+# Uses st.cache to only rerun when the query changes or after 10 min.
+@st.cache(ttl=600)
+def get_data():
+    db = client.mydb
+    items = db.mycollection.find()
+    items = list(items)  # make hashable for st.cache
+    return items
+
+items = get_data()
+
+# Print results.
+for item in items:
+    st.write(f"{item}")
