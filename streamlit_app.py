@@ -51,4 +51,4 @@ num_stocks = T_Code.count_documents({})
 
 st.write(num_stocks)
 
-client.close()
+conn.close()
