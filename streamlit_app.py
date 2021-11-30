@@ -39,7 +39,7 @@ with st.echo(code_location='below'):
         .encode(x='x:Q', y='y:Q'))
 
 # Initialize connection.
-conn = MongoClient('127.0.0.1',27017, username=st.secrets.db_credentials.DB_USER,password=st.secrets.db_credentials.DB_TOKEN, tls=True, tlsAllowInvalidCertificates=True)
+conn = MongoClient('116.33.63.12',27017, username=st.secrets.db_credentials.DB_USER,password=st.secrets.db_credentials.DB_TOKEN, tls=True, tlsAllowInvalidCertificates=True)
 
 # Pull data from the collection.
 # Uses st.cache to only rerun when the query changes or after 10 min.
