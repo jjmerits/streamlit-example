@@ -45,10 +45,10 @@ conn = pymongo.MongoClient(st.secrets.db_credentials.HOST,st.secrets.db_credenti
 
 # Pull data from the collection.
 # Uses st.cache to only rerun when the query changes or after 10 min.
-korea = conn.korea
-T_Code = korea.T_Code
-num_stocks = T_Code.count_documents({})
+USD_list = conn.econdata.glob.find({'currency':'USD'}).distinct('event')
+cursor = conn.econdata.glob.find({'event':{"$in":USD_list},'currency':'USD'},{'_id':False})
+df =pd.DataFrame(cursor)
 
-st.write(num_stocks)
+st.write(df.head(5))
 
 conn.close()
