@@ -1,4 +1,6 @@
 from SessionState import get
+import streamlit
+
 
 session_state = get(password='')
 
