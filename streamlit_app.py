@@ -1,8 +1,8 @@
-from SessionState import get
+import SessionState
 import streamlit
 
 
-session_state = get(password='')
+session_state = SessionState.get(password='')
 
 if session_state.password != 'pwd123':
     pwd_placeholder = st.sidebar.empty()
