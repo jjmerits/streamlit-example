@@ -117,10 +117,10 @@ def gnews_html(q_str, cn='US', la='english'):
 ##########################  
 col1, col2 = st.columns(2)
 with col1:
-  gnews_html("Dollar Index","US")
+  gnews_html("tesla TSLA","US")
   
 with col2:
-  gnews_html("EUR currency")
+  gnews_html("테슬라","KR")
 ##########################
 col1, col2 = st.columns(2)
 with col1:
@@ -138,4 +138,3 @@ with col2:
 ##########################
 
 
-conn.close()
