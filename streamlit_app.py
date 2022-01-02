@@ -124,7 +124,7 @@ with col2:
 ##########################
 col1, col2 = st.columns(2)
 with col1:
-  gnews_html("facebook FB","US")
+  gnews_html("META FB","US")
   
 with col2:
   gnews_html("AUD currency","AU")
