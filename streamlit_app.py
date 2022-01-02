@@ -120,7 +120,7 @@ with col1:
   gnews_html("tesla TSLA","US")
   
 with col2:
-  gnews_html("테슬라","KR")
+  gnews_html("테슬라","KR", "ko")
 ##########################
 col1, col2 = st.columns(2)
 with col1:
