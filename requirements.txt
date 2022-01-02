@@ -1,5 +1,9 @@
-altair
-pandas
 streamlit
+pandas
+numpy
+matplotlib
+plotly
+datetime
+seaborn
 pymongo
-SessionState
+gnews
