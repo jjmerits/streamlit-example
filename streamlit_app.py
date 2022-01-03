@@ -119,21 +119,21 @@ def gnews_html(q_str, cn='US', la='english'):
 ##########################  
 col1, col2 = st.columns(2)
 with col1:
-  gnews_html("tesla TSLA","'United States'")
+  gnews_html("tesla TSLA","United States")
   
 with col2:
   gnews_html("테슬라","KR", "ko")
 ##########################
 col1, col2 = st.columns(2)
 with col1:
-  gnews_html("META FB","'United States'")
+  gnews_html("META FB","United States")
   
 with col2:
-  gnews_html("s&p 500 SPX","'United States'")
+  gnews_html("s&p 500 SPX","United States")
 ##########################
 col1, col2 = st.columns(2)
 with col1:
-  gnews_html("nasdaq","'United States'")
+  gnews_html("nasdaq","United States")
   
 with col2:
   gnews_html("Dow 30","HK")
