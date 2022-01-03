@@ -127,14 +127,14 @@ with col1:
   gnews_html("META FB","US")
   
 with col2:
-  gnews_html("s&p500 DOW NASDAQ","US")
+  gnews_html("s&p 500","US")
 ##########################
 col1, col2 = st.columns(2)
 with col1:
-  gnews_html("Idian Rupee","IN")
+  gnews_html("nasdaq","US")
   
 with col2:
-  gnews_html("Chinese Yuan","HK")
+  gnews_html("Dow 30","HK")
 ##########################
 
 
