@@ -105,9 +105,10 @@ def gnews_html(q_str, cn='US', la='english'):
   df['published date'] = df['published date'].apply(lambda x: datetime.strptime(x, '%a, %d %b %Y %H:%M:%S %Z').replace(tzinfo=timezone.utc))
   df['published date'] = df['published date'].dt.tz_convert('US/Eastern')
   df['published date'] = df['published date'].apply(lambda x: x.strftime('%d/%m/%y %H:%M:%S'))
-  df.rename(columns={'published date': 'date (EST)'}, inplace = True)
+  df['published date'] = df['published date'] - est_time
+  df.rename(columns={'published date': 'hour ago'}, inplace = True)
     
-  df.sort_values('date (EST)', inplace = True, ascending = False)
+  df.sort_values('importance', inplace = True, ascending = False)
   df.drop(['description','publisher'], axis=1, inplace = True)
   # link is the column with hyperlinks
   df['url'] = df['url'].apply(make_clickable)
