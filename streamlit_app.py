@@ -97,7 +97,7 @@ def gnews_html(q_str, cn='US', la='english'):
   google_news = gnews.GNews()
   google_news.country = cn
   google_news.language = la
-  google_news.period = '12h'
+  google_news.period = '24h'
   google_news.results = 30
   df = google_news.get_news(q_str)
   df = pd.DataFrame.from_records(df)
