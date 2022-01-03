@@ -127,7 +127,7 @@ with col1:
   gnews_html("META FB","US")
   
 with col2:
-  gnews_html("AUD currency","AU")
+  gnews_html("s&p500 DOW NASDAQ","US")
 ##########################
 col1, col2 = st.columns(2)
 with col1:
