@@ -92,7 +92,7 @@ def tz_diff(date, tz1, tz2):
             tz2.localize(date).astimezone(tz1)) \
                .seconds/3600
   
-def gnews_html(q_str, cn='US', la='english'):
+def gnews_html(q_str, cn='US', la='en'):
   st.write(q_str)
   google_news = gnews.GNews()
   google_news.country = cn
@@ -129,7 +129,7 @@ with col1:
   gnews_html("META FB","United States")
   
 with col2:
-  gnews_html("s%26p 500 SPX","United States")
+  gnews_html("s%26p 500 SPX","US")
 ##########################
 col1, col2 = st.columns(2)
 with col1:
