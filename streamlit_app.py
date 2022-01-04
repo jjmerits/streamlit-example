@@ -133,7 +133,7 @@ with col2:
 ##########################
 col1, col2 = st.columns(2)
 with col1:
-  gnews_html("nasdaq","United States")
+  gnews_html("semiconductor","US")
   
 with col2:
   gnews_html("Dow30","US")
