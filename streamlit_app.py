@@ -135,7 +135,7 @@ with col1:
 with col2:
   gnews_html("renewable energy","US")
 ##########################
-##########################
+
 col1, col2 = st.columns(2)
 with col1:
   gnews_html("software industry","US")
@@ -143,12 +143,11 @@ with col1:
   
 with col2:
   gnews_html("game industry","US")
-##########################
 
 ##########################  
 col1, col2 = st.columns(2)
 with col1:
-  gnews_html("dollarindex","United States")
+  gnews_html("dollarindex","US")
   
 with col2:
   gnews_html("FOMC","US")
