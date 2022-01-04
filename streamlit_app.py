@@ -129,7 +129,7 @@ with col1:
   gnews_html("META FB","United States")
   
 with col2:
-  gnews_html("s&p 500 SPX","United States")
+  gnews_html("s%26p 500 SPX","United States")
 ##########################
 col1, col2 = st.columns(2)
 with col1:
