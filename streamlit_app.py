@@ -129,7 +129,7 @@ with col2:
 ##########################
 col1, col2 = st.columns(2)
 with col1:
-  gnews_html("energy","US")
+  gnews_html("energy stock","US")
   
   
 with col2:
