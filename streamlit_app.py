@@ -116,6 +116,17 @@ def gnews_html(q_str, cn='US', la='en'):
   #df.reset_index(drop=True, inplace=True)
   df = df.iloc[0:30,].to_html(escape=False,index=False)
   st.write(df, unsafe_allow_html=True)
+
+##########################
+col1, col2 = st.columns(2)
+with col1:
+  gnews_html("semiconductor","US")
+  
+  
+with col2:
+  gnews_html("electric car","US")
+##########################
+
 ##########################  
 col1, col2 = st.columns(2)
 with col1:
@@ -123,6 +134,7 @@ with col1:
   
 with col2:
   gnews_html("FOMC","US")
+
 ##########################
 col1, col2 = st.columns(2)
 with col1:
@@ -130,13 +142,3 @@ with col1:
   
 with col2:
   gnews_html("s%26p500","US")
-##########################
-col1, col2 = st.columns(2)
-with col1:
-  gnews_html("semiconductor","US")
-  
-with col2:
-  gnews_html("Dow30","US")
-##########################
-
-
