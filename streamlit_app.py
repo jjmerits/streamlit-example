@@ -125,6 +125,24 @@ with col1:
   
 with col2:
   gnews_html("electric car","US")
+  
+##########################
+col1, col2 = st.columns(2)
+with col1:
+  gnews_html("energy","US")
+  
+  
+with col2:
+  gnews_html("renewable energy","US")
+##########################
+##########################
+col1, col2 = st.columns(2)
+with col1:
+  gnews_html("software industry","US")
+  
+  
+with col2:
+  gnews_html("game industry","US")
 ##########################
 
 ##########################  
@@ -138,7 +156,7 @@ with col2:
 ##########################
 col1, col2 = st.columns(2)
 with col1:
-  gnews_html("china Yuan","United States")
+  gnews_html("china Yuan","HK")
   
 with col2:
   gnews_html("s%26p500","US")
