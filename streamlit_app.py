@@ -114,7 +114,7 @@ def gnews_html(q_str, cn='US', la='en'):
   # link is the column with hyperlinks
   df['url'] = df['url'].apply(make_clickable)
   #df.reset_index(drop=True, inplace=True)
-  df = df.iloc[0:30,].to_html(escape=False,index=False)
+  df = df.iloc[0:50,].to_html(escape=False,index=False)
   st.write(df, unsafe_allow_html=True)
 
 ##########################
