@@ -98,7 +98,7 @@ def gnews_html(q_str, cn='US', la='en'):
   google_news.country = cn
   google_news.language = la
   google_news.period = '24h'
-  google_news.results = 50
+  google_news.results = 30
   df = google_news.get_news(q_str)
   df = pd.DataFrame.from_records(df)
   df = df.reset_index().rename({'index':'importance'}, axis = 'columns')
@@ -114,7 +114,7 @@ def gnews_html(q_str, cn='US', la='en'):
   # link is the column with hyperlinks
   df['url'] = df['url'].apply(make_clickable)
   #df.reset_index(drop=True, inplace=True)
-  df = df.iloc[0:50,].to_html(escape=False,index=False)
+  df = df.iloc[0:30,].to_html(escape=False,index=False)
   st.write(df, unsafe_allow_html=True)
 
 ##########################
@@ -167,7 +167,7 @@ with col2:
 ##########################
 col1, col2 = st.columns(2)
 with col1:
-  gnews_html("dollarindex","US")
+  gnews_html("dollar index","US")
   
 with col2:
   gnews_html("FOMC","US")
