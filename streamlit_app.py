@@ -144,16 +144,6 @@ with col1:
 with col2:
   gnews_html("gaming industry","US")
 
-########################## 
-
-col1, col2 = st.columns(2)
-with col1:
-  gnews_html("software industry","US")
-  
-  
-with col2:
-  gnews_html("gaming industry","US")
-
 ##########################
 
 col1, col2 = st.columns(2)
