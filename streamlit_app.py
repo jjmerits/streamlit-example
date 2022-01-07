@@ -157,15 +157,15 @@ with col2:
 ##########################
 col1, col2 = st.columns(2)
 with col1:
-  gnews_html("dollar index","US")
+  gnews_html("dollar index market","US")
   
 with col2:
-  gnews_html("FOMC","US")
+  gnews_html("FOMC market","US")
 
 ##########################
 col1, col2 = st.columns(2)
 with col1:
-  gnews_html("china Yuan","HK")
+  gnews_html("china Yuan market","HK")
   
 with col2:
   gnews_html("s%26p500 market","US")
