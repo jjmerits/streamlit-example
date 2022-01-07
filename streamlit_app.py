@@ -168,4 +168,4 @@ with col1:
   gnews_html("china Yuan","HK")
   
 with col2:
-  gnews_html("s%26p500","US")
+  gnews_html("s%26p500 market","US")
