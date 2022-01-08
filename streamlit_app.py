@@ -124,31 +124,31 @@ with col1:
   
   
 with col2:
-  gnews_html("semiconductor industry","US")
+  gnews_html("semiconductor ~industry or ~company","US")
   
 ##########################
 col1, col2 = st.columns(2)
 with col1:
-  gnews_html("electric vehicle industry","US")
+  gnews_html("electric vehicle ~industry or ~company","US")
   
   
 with col2:
-  gnews_html("energy industry","US")
+  gnews_html("energy ~industry or ~company","US")
 ##########################
 
 col1, col2 = st.columns(2)
 with col1:
-  gnews_html("cloud industry","US")
+  gnews_html("cloud ~industry or ~company","US")
   
   
 with col2:
-  gnews_html("gaming industry","US")
+  gnews_html("gaming ~industry or ~company","US")
 
 ##########################
 
 col1, col2 = st.columns(2)
 with col1:
-  gnews_html("5G IoT","US")
+  gnews_html("5G IoT ~industry or ~company","US")
   
   
 with col2:
@@ -157,15 +157,15 @@ with col2:
 ##########################
 col1, col2 = st.columns(2)
 with col1:
-  gnews_html("dollar index market","US")
+  gnews_html("dollar index ~market","US")
   
 with col2:
-  gnews_html("FOMC market","US")
+  gnews_html("FOMC ~market","US")
 
 ##########################
 col1, col2 = st.columns(2)
 with col1:
-  gnews_html("china Yuan market","HK")
+  gnews_html("china Yuan ~market","HK")
   
 with col2:
-  gnews_html("s%26p500 market","US")
+  gnews_html("s%26p500 ~market","US")
