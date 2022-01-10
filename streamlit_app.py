@@ -142,7 +142,7 @@ with col1:
   
   
 with col2:
-  gnews_html("gaming ~industry or ~company","US")
+  gnews_html("game ~industry or ~company","US")
 
 ##########################
 
