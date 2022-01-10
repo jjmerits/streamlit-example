@@ -120,7 +120,7 @@ def gnews_html(q_str, cn='US', la='en'):
 ##########################
 col1, col2 = st.columns(2)
 with col1:
-  gnews_html("CES 2022","US")
+  gnews_html("value stock or ~inflation","US")
   
   
 with col2:
