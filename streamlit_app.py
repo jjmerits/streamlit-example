@@ -152,7 +152,7 @@ with col1:
   
   
 with col2:
-  gnews_html("honeywell ~stock","US")
+  gnews_html("russia Ukrain","US")
 
 ##########################
 col1, col2 = st.columns(2)
