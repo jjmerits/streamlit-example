@@ -120,7 +120,7 @@ def gnews_html(q_str, cn='US', la='en'):
 ##########################
 col1, col2 = st.columns(2)
 with col1:
-  gnews_html("value stock or ~inflation","US")
+  gnews_html("teladoc primary360","US")
   
   
 with col2:
@@ -129,43 +129,43 @@ with col2:
 ##########################
 col1, col2 = st.columns(2)
 with col1:
-  gnews_html("electric vehicle ~industry or ~company","US")
+  gnews_html("teladoc Visit","US")
   
   
 with col2:
-  gnews_html("energy ~industry or ~company","US")
+  gnews_html("teladoc employer","US")
 ##########################
 
 col1, col2 = st.columns(2)
 with col1:
-  gnews_html("cloud ~industry or ~company","US")
+  gnews_html("teladoc e-commerce","US")
   
   
 with col2:
-  gnews_html("game ~industry or ~company","US")
+  gnews_html("teladoc acquisition","US")
 
 ##########################
 
 col1, col2 = st.columns(2)
 with col1:
-  gnews_html("5G IoT ~industry or ~company","US")
+  gnews_html("teladoc aentna","US")
   
   
 with col2:
-  gnews_html("russia Ukrain","US")
+  gnews_html("teladoc physical delivery system","US")
 
 ##########################
 col1, col2 = st.columns(2)
 with col1:
-  gnews_html("dollar index ~market","US")
+  gnews_html("teladoc customer acquisition expense"","US")
   
 with col2:
-  gnews_html("FOMC ~market","US")
+  gnews_html("teladoc cgm","US")
 
 ##########################
 col1, col2 = st.columns(2)
 with col1:
-  gnews_html("china Yuan ~market","HK")
+  gnews_html("teladoc competition","US")
   
 with col2:
-  gnews_html("s%26p500 ~market","US")
+  gnews_html("teladoc DTC","US")
