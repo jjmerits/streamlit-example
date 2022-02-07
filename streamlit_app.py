@@ -105,9 +105,9 @@ def gnews_html(q_str, cn='US', la='en'):
   df['published date'] = df['published date'].apply(lambda x: datetime.strptime(x, '%a, %d %b %Y %H:%M:%S %Z').replace(tzinfo=timezone.utc))
   df['published date'] = df['published date'].dt.tz_convert('US/Eastern')
   #df['published date'] = df['published date'].apply(lambda x: x.strftime('%d/%m/%y %H:%M:%S'))
-  df['published date'] = datetime.today().astimezone(seo).astimezone(est) - df['published date']
+  df['published date'] = (datetime.today().astimezone(seo).astimezone(est) - df['published date'])/24
   df['published date'] = df['published date'].apply(lambda x: int(x.total_seconds()//3600))
-  df.rename(columns={'published date': 'hour ago'}, inplace = True)
+  df.rename(columns={'published date': 'day ago'}, inplace = True)
     
   df.sort_values('importance', inplace = True, ascending = True)
   df.drop(['description','publisher'], axis=1, inplace = True)
